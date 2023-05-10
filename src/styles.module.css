@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+}
+
+.header{
+    color: white;
+    background-color: steelblue;
+    height: 50px;
+    font-size: 1.5rem;
+    padding:30px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.form{
+ text-align: center;
+ margin-top: 80px;
+}
+
+.form input{
+    width: 50%;
+    height: 30px;
+    margin-bottom: 12px;
+    border: none;
+    border-bottom: 2px solid steelblue;
+    text-align: center;
+}
+
+.form :last-child input{
+    border: 1px solid salmon;
+    border-radius: 4px;
+    margin-top: 40px;
+}
