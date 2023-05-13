@@ -1,9 +1,8 @@
 import styles from "../styles.module.css";
-
-const TodoList = (props) => {
-    let count = 1;
-  let allNames = props.names.map((name, index) => {
-    return <h4 key={index} className={styles.singleList}>{count ++}. {name}</h4>;
+import Todo from "./Todo";
+const TodoList = ({ todoList, setTodoList }) => {
+  let allNames = todoList.map((item) => {
+   return <Todo key={item.id} item={item} todoList={todoList} setTodoList={setTodoList} />;
   });
   return (
     <div className={styles.listTodo}>

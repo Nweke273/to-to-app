@@ -1,26 +1,33 @@
-import { useState } from "react";
+import shortid from "shortid";
 import styles from "../styles.module.css";
 import TodoList from "./TodoList";
 
-const TodoForm = () => {
-  const [todo, setTodo] = useState("");
-  //   const [description, setDescription] = useState("");
-  const [todoList, setTodoList] = useState([]);
-
+const TodoForm = ({
+  todo,
+  setTodo,
+  description,
+  setDescription,
+  todoList,
+  setTodoList,
+}) => {
   const takeTodo = (event) => {
     setTodo(event.target.value);
   };
 
-  //   const takeDescription = (event) => {
-  //     setDescription(event.target.value);
-  //   };
+  const takeDescription = (event) => {
+    setDescription(event.target.value);
+  };
 
   const handleFormSubmission = (event) => {
     event.preventDefault();
-    let allTodos = todoList;
-    allTodos.push(todo);
-    setTodoList(allTodos);
+
+    setTodoList([
+      ...todoList,
+      { id: shortid.generate(), name: todo, desc: description },
+    ]);
+    console.log(todoList);
     setTodo("");
+    setDescription("");
   };
   return (
     <div>
@@ -33,19 +40,19 @@ const TodoForm = () => {
             value={todo}
           />
         </div>
-        {/* <div>
+        <div>
           <input
             onChange={takeDescription}
             type="text"
             placeholder="Enter Description"
             value={description}
           />
-        </div> */}
+        </div>
         <div>
           <input type="submit" name="" id="" value="submit" />
         </div>
       </form>
-      <TodoList names={todoList} />
+      <TodoList todoList={todoList} setTodoList={setTodoList} />
     </div>
   );
 };

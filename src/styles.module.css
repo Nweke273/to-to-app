@@ -48,8 +48,14 @@ body{
   padding:20px;
   text-align: left;
   background-color: steelblue;
-  margin-bottom: -4px;
+  margin-bottom: 12px;
   color: white;
   border-radius: 6px;
   
+}
+
+.desc{
+    margin-left: 16px;
+    font-style: italic;
+
 }
