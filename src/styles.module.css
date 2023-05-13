@@ -18,7 +18,7 @@ body{
 }
 
 .form input{
-    width: 50%;
+    width: 80%;
     height: 30px;
     margin-bottom: 12px;
     border: none;
@@ -27,7 +27,29 @@ body{
 }
 
 .form :last-child input{
-    border: 1px solid salmon;
+    border: 1px solid steelblue;
+    background-color: white;
     border-radius: 4px;
     margin-top: 40px;
+}
+
+.listTodo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+}
+
+.singleList{
+  align-items: left;
+  width: 80%;
+  padding:20px;
+  text-align: left;
+  background-color: steelblue;
+  margin-bottom: -4px;
+  color: white;
+  border-radius: 6px;
+  
 }
