@@ -59,3 +59,23 @@ body{
     font-style: italic;
 
 }
+
+.deleteBtn{
+
+  
+    border: 1px solid steelblue;
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 40px;
+    width: 50%;
+    height: 30px; 
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+}

@@ -11,7 +11,10 @@ const Todo = ({ item, todoList, setTodoList }) => {
         {count++}. {item.name}
       </h4>
       <h4 className={styles.desc}>{item.desc}</h4>
-      <button onClick={removeTodo}>Done</button>
+      <div className={styles.container}>
+      <button onClick={removeTodo} className={styles.deleteBtn}>Done</button>
+
+      </div>
     </div>
   );
 };
